@@ -53,7 +53,7 @@ spec:
           value: mongodb
         ports:
         - containerPort: 5000
-          name: 443
+          name: web-port
 
 ---
 apiVersion: v1
