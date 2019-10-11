@@ -67,7 +67,7 @@ spec:
   ports:
   - port: 80
     protocol: TCP
-    targetPort: 80
+    targetPort: web-port
   - port: 443
     protocol: TCP
     targetPort: 443
