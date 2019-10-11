@@ -53,7 +53,7 @@ spec:
           value: mongodb
         ports:
         - containerPort: 5000
-          name: web-port
+          name: 443
 
 ---
 apiVersion: v1
@@ -63,15 +63,11 @@ metadata:
   labels:
     apps: rsvp
 spec:
+  type: NodePort
   ports:
-  - name: http
-    protocol: TCP
-    port: 80
-    targetPort: 80 
-  - name: https
-    protocol: TCP
-    port: 443
+  - port: 443
     targetPort: 443
+    protocol: TCP
   selector:
     app: rsvp
 ---
