@@ -65,8 +65,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 443
-    targetPort: 443
+  - port: 80
+    targetPort: web-port
     protocol: TCP
   selector:
     app: rsvp
